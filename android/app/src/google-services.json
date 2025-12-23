@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897998153776",
+    "project_id": "productivai-d2945",
+    "storage_bucket": "productivai-d2945.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897998153776:android:a29bde50edb01a8699a5f5",
+        "android_client_info": {
+          "package_name": "com.example.ai_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0SWNqPqavCjZjKjMoj-EAVAFwxSy8y2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
