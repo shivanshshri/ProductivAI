@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'screen1.dart';
+import 'package:ai_app/microsoft_auth_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_appauth/flutter_appauth.dart';
+//import 'package:flutter_aad_oauth/flutter_aad_oauth.dart';
 
 class login extends StatefulWidget {
   const login({super.key});
@@ -44,11 +48,13 @@ class _loginState extends State<login> {
              ),
              clipBehavior: Clip.antiAlias,
              child: InkWell(
-               onTap: () {
-                 Navigator.pushReplacement(
-                   context,
-                   MaterialPageRoute(builder: (context) => AnimatedSplashScreen()),
-                 );
+               onTap: () async {
+                 final authService = MicrosoftAuthService();
+                 final userData = await authService.signInWithMicrosoft();
+
+                 if (userData != null) {
+                   print("Access Token: ${userData['accessToken']}");
+                 }
                },
                child: Container(
                  height: 60,
